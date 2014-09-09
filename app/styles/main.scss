@@ -1,0 +1,53 @@
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+
+.center {
+    text-align: center;
+}
+.colony table{
+    padding: 0;
+    margin-top:5px;
+    margin-left:auto;
+    margin-right:auto;
+    border-spacing: 0;
+    border: 2px solid #eee;
+}
+.colony td {
+    padding: 0;
+    border: 3px solid #eee;
+}
+.cell {
+    padding: 15px;
+    display: block;
+}
+.cell.alive-false{
+    background-color: #A9CBF1;
+}
+.cell.alive-true{
+    background-color: #6D9F17;
+}
+.size {
+    font-size: 24px;
+}
+.btn {
+    margin: 15px;
+}
+.green {
+    background-color: #94D800;
+    color: #eee;
+}
+.red {
+    background-color: #FB3D3D;
+    color: #eee;
+}
+.blue {
+    background-color: #428BCA;
+    color: #eee;
+}
+.light-blue {
+    background-color: #A9CBF1;
+    color: #eee;
+}
+.orange {
+    background-color: #FBA324;
+    color: #eee;
+}

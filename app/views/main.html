@@ -1,0 +1,32 @@
+<div class="container" ng-controller='GameController'>
+  <!-- heading -->
+  <div id="heading" class="center">
+    <h1 class="title">Conway's Game of Life</h1>
+  </div>
+ <div class="colony">
+        <div class="center">
+                <div class="size">
+                    (<button class="btn btn-xs blue" ng-click="removeRow()"><span class="glyphicon glyphicon-minus"></span></button>{{newRows}}<button class="btn btn-xs light-blue" ng-click="addRow()"><span class="glyphicon glyphicon-plus"></span></button>
+                     x
+                    <button class="btn btn-xs blue" ng-click="removeColumn()"><span class="glyphicon glyphicon-minus"></span></button>{{newColumns}}<button class="btn btn-xs light-blue" ng-click="addColumn()"><span class="glyphicon glyphicon-plus"></span></button>)
+                </div>
+            </h1>
+        </div>
+        <div class="center">
+            <button class="btn btn-md green" ng-click="ruleTheColony()" ng-hide="started" ng-show="!started">Next Step</button>
+            <button class="btn btn-md green" ng-click="start()" ng-hide="started" ng-show="!started">Start</button>
+            <button class="btn btn-md red" ng-click="stop()" ng-hide="!started" ng-show="started">Stop</button>
+            <button class="btn btn-md orange" ng-click="reset()">Reset</button>
+        </div>
+        <table>
+            <tr class="row" ng-repeat="rows in colony">
+                <td class="cells" ng-repeat="cell in rows">
+                    <div class="cell alive-{{cell.isAlive}}" ng-click="cell.toggle()" title="{{{true: 'alive', false: 'dead'}[cell.isAlive]}} ({{cell.posX}}-{{cell.posY}})">
+                    </div>
+                </td>
+            </tr>
+        </table>
+  </div>
+</div>
+
+
